@@ -1,12 +1,14 @@
 <html>
 <head></head>
 <body>
-	<div id="fb-root"></div>
-	<fb:login-button scope="public_profile,email" autologoutlink="true"  onlogin="checkLoginState();">
-	</fb:login-button>
-
-	<div id="status">
+	<div class="main-wrapper">
+		<!-- section index -->
+		<section id="s_index"></section>
+		<!-- section gallery -->
+		<section id="s_gallery"></section>
 	</div>
+	<div id="fb-root"></div>
+
 	<script src="//connect.facebook.net/en_US/all.js"></script>
 	
 	<script>
@@ -24,6 +26,9 @@
 		      }
 		    }
 		);
+	  }
+	  function populate_photo (argument) {
+	  	
 	  }
 	  get_photo("");
 	</script>
