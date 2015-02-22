@@ -1,0 +1,201 @@
+/*load external fonts*/
+@font-face{
+	font-family:just-say;
+	src:url(../fonts/MfJustSayin.ttf);
+}
+@font-face{
+	font-family:coarse-rnd;
+	src:url(../fonts/CoarseRounded.otf);
+}
+/*animation*/
+@-webkit-keyframes animate-el-1 {
+    0%   {margin-top: -100px;}
+    100% {margin-top: -10px;opacity: 1;}
+}
+
+@keyframes animate-el-1 {
+    0%   {margin-top: -100px;}
+    100% {margin-top: -10px;opacity: 1;}
+}
+@-webkit-keyframes animate-fade {
+    0%   {}
+    100% {opacity: 1;}
+}
+
+@keyframes animate-fade {
+    0%   {}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes animate-glow {
+    0%   {}
+    50% {text-shadow: 0px 0px 15px #FF9900;}
+    100% {text-shadow: 0px 0px 0px #FF9900;}
+}
+
+@keyframes animate-glow {
+    0%   {}
+    50% {text-shadow: 0px 0px 15px #FF9900;}
+    100% {text-shadow: 0px 0px 0px #FF9900;}
+}
+@-webkit-keyframes animate-arrow {
+    0%   {}
+    50% {background-position: 0px 25px;}
+    100% {background-position: 0px 0px;}
+}
+
+@keyframes animate-arrow {
+    0%   {}
+    50% {background-position: 0px 25px;}
+    100% {background-position: 0px 0px;}
+}
+
+body,html{
+	background: #CCCCCC;
+}
+#s_index{
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding-top: 25%;
+}
+#s_index .title{
+	height: 100px;
+}
+#s_index .anim{
+	color:#000;
+	font-family: coarse-rnd;
+	opacity: 0;
+}
+#s_index .anim.el1{
+	color: #CC6633;
+	font-family: just-say;
+	margin-top: -100px;
+	margin-left: -20px;
+	font-size: 35px;
+	display: inline-block;	
+	position: absolute;
+
+	/*animation*/
+    -webkit-animation-name: animate-el-1;
+    -webkit-animation-duration: .6s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animate-el-1;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+
+    -ms-transform: rotate(-20deg); /* IE 9 */
+    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+    transform: rotate(-20deg); /*moz*/
+}
+#s_index .anim.el2{
+	/*animation*/
+    -webkit-animation-name: animate-fade;
+    -webkit-animation-duration: 1.4s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animate-fade;
+    animation-duration: 1.4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+#s_index .anim.el3{
+	/*animation*/
+    -webkit-animation-name: animate-fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: .6s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animate-fade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: .6s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+#s_index .anim.el4{
+	opacity: 1;
+    text-shadow: 0px 0px 15px #FF9900;
+
+	/*animation*/
+    -webkit-animation-name: animate-glow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animate-glow;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+#s_index .arrow{
+	width: 48px;
+	height: 50px;
+	margin: 0 auto;
+	background: url(../images/arrow-button.png) no-repeat;
+	background-position: 0px 0px;
+	margin-top: 1000px;
+	/*animation*/
+    -webkit-animation-name: animate-arrow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animate-arrow;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+#s_index .anim.el2{
+	margin-left: 50px;
+}
+#s_index .anim.el4{
+	font-size: 40px;
+}
+#s_index
+
+#s_gallery{
+	background: #771100;
+	border-radius: 20px;
+	padding: 20px;
+	display: none;
+}
+#s_gallery img{
+	margin-top: 20px;
+}
