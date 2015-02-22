@@ -9,6 +9,8 @@
 	<div class="container">
 		<!-- section index -->
 		<section id="s_index"></section>
+		<!-- section transition -->
+		<section id="s_trans"></section>
 		<!-- section gallery -->
 		<section id="s_gallery">
 			<div id="links"></div>
@@ -73,15 +75,15 @@
 	                .attr('data-gallery', "")
 	                .appendTo(linksContainer);
 			  	}
-			  	else{
-			  		baseUrl = msg.data[i].videos.standard_resolution.url;
-			  		thumb = msg.data[i].images.thumbnail.url;
-	            $('<a/>')
-	                .append($('<img>').prop('src', thumb ))
-	                .prop('href', baseUrl)
-	                .prop('target', "_new")
-	                .appendTo(linksContainer);
-			  	}
+			  	// else{
+			  	// 	baseUrl = msg.data[i].videos.standard_resolution.url;
+			  	// 	thumb = msg.data[i].images.thumbnail.url;
+	     //        $('<a/>')
+	     //            .append($('<img>').prop('src', thumb ))
+	     //            .prop('href', baseUrl)
+	     //            .prop('target', "_new")
+	     //            .appendTo(linksContainer);
+			  	// }
 		  		
 		  	}
 		  });
