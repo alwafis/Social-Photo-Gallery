@@ -16,12 +16,11 @@
 				<span class="anim el3">in</span> 
 				<span class="anim el4">Instagram</span>
 			</div>
-			<div class="arrow"></div>
+			<div class="arrow"></div>	
 		</section>
-		<!-- section transition -->
-		<section id="s_trans"></section>
 		<!-- section gallery -->
 		<section id="s_gallery" class="col-md-12 text-center">
+			<div class="title">Photos</div>
 			<div id="links"></div>
 		</section>
 	</div>
@@ -62,40 +61,6 @@
 	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/vendor/bootstrap-img-gallery/js/jquery.blueimp-gallery.min.js"></script>
 	<script src="assets/vendor/bootstrap-img-gallery/js/bootstrap-image-gallery.js"></script>
-	<script>
-	// page load script
-	$( document ).ready(function() {
-		$( ".arrow" ).animate({marginTop: "0",}, 1500 );
-	});
-	//get and populate photo from instagram
-		$.ajax({
-		  type: "GET",
-		  url: "server-side/popular.php",
-		})
-		  .done(function( msg ) {
-		  	var linksContainer = $('#links'),
-            baseUrl,thumb;
-		  	msg = JSON.parse(msg);
-		  	for (var i = 0; i < msg.data.length; i++) {
-		  			console.log(msg.data[i]);
-		  		// check if the element type is images
-		  		if(msg.data[i].type=="image"){
-		  			$("#s_gallery").css("display","block");
-		  			$("#s_gallery").css("opacity","0");
-			  		baseUrl = msg.data[i].images.standard_resolution.url;
-			  		thumb = msg.data[i].images.thumbnail.url;
-			  	// create <a> element and append it to #links 
-	            $('<a/>')
-	                .append($('<img>').prop('src', thumb ).prop("class","col-md-3"))
-	                .prop('href', baseUrl)
-	                .prop('title', 'credits @'+msg.data[i].user.username)
-	                .attr('data-gallery', "")
-	                .appendTo(linksContainer);
-			  	}
-		  		
-		  	}
-		  });
-	</script>
-
+	<script src="assets/js/page.js"></script>
 </body>
 </html>

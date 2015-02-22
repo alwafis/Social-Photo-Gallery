@@ -7,7 +7,8 @@
 	font-family:coarse-rnd;
 	src:url(../fonts/CoarseRounded.otf);
 }
-/*animation*/
+/*------------------------------Animation Section-------------------------------*/
+/*animation for element 1*/
 @-webkit-keyframes animate-el-1 {
     0%   {margin-top: -100px;}
     100% {margin-top: -10px;opacity: 1;}
@@ -17,6 +18,7 @@
     0%   {margin-top: -100px;}
     100% {margin-top: -10px;opacity: 1;}
 }
+/*animation for fade*/
 @-webkit-keyframes animate-fade {
     0%   {}
     100% {opacity: 1;}
@@ -26,6 +28,8 @@
     0%   {}
     100% {opacity: 1;}
 }
+
+/*animation for element 4 glowing*/
 @-webkit-keyframes animate-glow {
     0%   {}
     50% {text-shadow: 0px 0px 15px #FF9900;}
@@ -37,6 +41,8 @@
     50% {text-shadow: 0px 0px 15px #FF9900;}
     100% {text-shadow: 0px 0px 0px #FF9900;}
 }
+
+/*animation for arrow*/
 @-webkit-keyframes animate-arrow {
     0%   {}
     50% {background-position: 0px 25px;}
@@ -48,10 +54,13 @@
     50% {background-position: 0px 25px;}
     100% {background-position: 0px 0px;}
 }
+/*------------------------------Animation Section-------------------------------*/
 
+/*main style*/
 body,html{
 	background: #CCCCCC;
 }
+/*section index styling*/
 #s_index{
 	width: 100%;
 	height: 100%;
@@ -75,7 +84,7 @@ body,html{
 	display: inline-block;	
 	position: absolute;
 
-	/*animation*/
+	/*animation for element 1*/
     -webkit-animation-name: animate-el-1;
     -webkit-animation-duration: .6s;
     -webkit-animation-timing-function: linear;
@@ -93,12 +102,13 @@ body,html{
     animation-play-state: running;
     animation-fill-mode: forwards;
 
+	/*rotate the div -120deg*/
     -ms-transform: rotate(-20deg); /* IE 9 */
     -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
     transform: rotate(-20deg); /*moz*/
 }
 #s_index .anim.el2{
-	/*animation*/
+	/*animation for element 2*/
     -webkit-animation-name: animate-fade;
     -webkit-animation-duration: 1.4s;
     -webkit-animation-timing-function: linear;
@@ -117,7 +127,7 @@ body,html{
     animation-fill-mode: forwards;
 }
 #s_index .anim.el3{
-	/*animation*/
+	/*animation for element 3*/
     -webkit-animation-name: animate-fade;
     -webkit-animation-duration: 2s;
     -webkit-animation-timing-function: linear;
@@ -139,7 +149,7 @@ body,html{
 	opacity: 1;
     text-shadow: 0px 0px 15px #FF9900;
 
-	/*animation*/
+	/*animation for element 4*/
     -webkit-animation-name: animate-glow;
     -webkit-animation-duration: 1s;
     -webkit-animation-timing-function: linear;
@@ -164,7 +174,7 @@ body,html{
 	background: url(../images/arrow-button.png) no-repeat;
 	background-position: 0px 0px;
 	margin-top: 1000px;
-	/*animation*/
+	/*animation for arrow*/
     -webkit-animation-name: animate-arrow;
     -webkit-animation-duration: 1s;
     -webkit-animation-timing-function: linear;
@@ -182,20 +192,49 @@ body,html{
     animation-play-state: running;
     animation-fill-mode: forwards;
 }
+#s_index .arrow:hover{
+	cursor: pointer;
+}
 #s_index .anim.el2{
 	margin-left: 50px;
 }
 #s_index .anim.el4{
 	font-size: 40px;
 }
-#s_index
-
+/*section gallery styling*/
 #s_gallery{
 	background: #771100;
-	border-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 	padding: 20px;
 	display: none;
+	width: 100%;
 }
 #s_gallery img{
 	margin-top: 20px;
+}
+#s_gallery .title{
+	width: 100%;
+	font-size: 30px;
+	font-family: coarse-rnd;
+	color: #fff;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #fff;
+}
+/*Gallery style*/
+#links a{
+	display: block;
+}
+#links a img{
+	border-radius: 30px;
+}
+#links div{
+	border-radius: 20px;
+}
+#links a.tweet{
+	background: #fff;
+	border-radius: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px; 
 }
