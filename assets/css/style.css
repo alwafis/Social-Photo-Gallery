@@ -1,0 +1,240 @@
+/*load external fonts*/
+@font-face{
+	font-family:just-say;
+	src:url(../fonts/MfJustSayin.ttf);
+}
+@font-face{
+	font-family:coarse-rnd;
+	src:url(../fonts/CoarseRounded.otf);
+}
+/*------------------------------Animation Section-------------------------------*/
+/*animation for element 1*/
+@-webkit-keyframes animate-el-1 {
+    0%   {margin-top: -100px;}
+    100% {margin-top: -10px;opacity: 1;}
+}
+
+@keyframes animate-el-1 {
+    0%   {margin-top: -100px;}
+    100% {margin-top: -10px;opacity: 1;}
+}
+/*animation for fade*/
+@-webkit-keyframes animate-fade {
+    0%   {}
+    100% {opacity: 1;}
+}
+
+@keyframes animate-fade {
+    0%   {}
+    100% {opacity: 1;}
+}
+
+/*animation for element 4 glowing*/
+@-webkit-keyframes animate-glow {
+    0%   {}
+    50% {text-shadow: 0px 0px 15px #FF9900;}
+    100% {text-shadow: 0px 0px 0px #FF9900;}
+}
+
+@keyframes animate-glow {
+    0%   {}
+    50% {text-shadow: 0px 0px 15px #FF9900;}
+    100% {text-shadow: 0px 0px 0px #FF9900;}
+}
+
+/*animation for arrow*/
+@-webkit-keyframes animate-arrow {
+    0%   {}
+    50% {background-position: 0px 25px;}
+    100% {background-position: 0px 0px;}
+}
+
+@keyframes animate-arrow {
+    0%   {}
+    50% {background-position: 0px 25px;}
+    100% {background-position: 0px 0px;}
+}
+/*------------------------------Animation Section-------------------------------*/
+
+/*main style*/
+body,html{
+	background: #CCCCCC;
+}
+/*section index styling*/
+#s_index{
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding-top: 25%;
+}
+#s_index .title{
+	height: 100px;
+}
+#s_index .anim{
+	color:#000;
+	font-family: coarse-rnd;
+	opacity: 0;
+}
+#s_index .anim.el1{
+	color: #CC6633;
+	font-family: just-say;
+	margin-top: -100px;
+	margin-left: -20px;
+	font-size: 35px;
+	display: inline-block;	
+	position: absolute;
+
+	/*animation for element 1*/
+    -webkit-animation-name: animate-el-1;
+    -webkit-animation-duration: .6s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animate-el-1;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+
+	/*rotate the div -120deg*/
+    -ms-transform: rotate(-20deg); /* IE 9 */
+    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+    transform: rotate(-20deg); /*moz*/
+}
+#s_index .anim.el2{
+	/*animation for element 2*/
+    -webkit-animation-name: animate-fade;
+    -webkit-animation-duration: 1.4s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animate-fade;
+    animation-duration: 1.4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+#s_index .anim.el3{
+	/*animation for element 3*/
+    -webkit-animation-name: animate-fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: .6s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animate-fade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: .6s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+#s_index .anim.el4{
+	opacity: 1;
+    text-shadow: 0px 0px 15px #FF9900;
+
+	/*animation for element 4*/
+    -webkit-animation-name: animate-glow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animate-glow;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+#s_index .arrow{
+	width: 48px;
+	height: 50px;
+	margin: 0 auto;
+	background: url(../images/arrow-button.png) no-repeat;
+	background-position: 0px 0px;
+	margin-top: 1000px;
+	/*animation for arrow*/
+    -webkit-animation-name: animate-arrow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animate-arrow;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+#s_index .arrow:hover{
+	cursor: pointer;
+}
+#s_index .anim.el2{
+	margin-left: 50px;
+}
+#s_index .anim.el4{
+	font-size: 40px;
+}
+/*section gallery styling*/
+#s_gallery{
+	background: #771100;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding: 20px;
+	display: none;
+	width: 100%;
+}
+#s_gallery img{
+	margin-top: 20px;
+}
+#s_gallery .title{
+	width: 100%;
+	font-size: 30px;
+	font-family: coarse-rnd;
+	color: #fff;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #fff;
+}
+/*Gallery style*/
+#links a{
+	display: block;
+}
+#links a img{
+	border-radius: 30px;
+}
+#links div{
+	border-radius: 20px;
+}
+#links a.tweet{
+	background: #fff;
+	border-radius: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px; 
+}
